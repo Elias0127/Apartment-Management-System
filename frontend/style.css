@@ -1,0 +1,390 @@
+/* Body */
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #efeadb;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 80%;
+    padding: 2rem;
+    background-color: #c3b58b;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0,
+            0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 8px;
+}
+
+h1,
+h2 {
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #0f171b;
+}
+
+/* Home Page Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    list-style-type: none;
+}
+
+li {
+    padding: 6px 0;
+}
+
+a {
+    --fill-color: #e9f4c8;
+    position: relative;
+    display: block;
+    padding: 4px 0;
+    font: 500 2rem Raleway, sans-serif;
+    font-weight: bolder;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: linear-gradient(var(--fill-color) 0 100%) left / 0 no-repeat;
+    color: transparent;
+    background-clip: text;
+    transition: 0.5s linear;
+    border-radius: 8px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    background-size: 100%;
+}
+
+/* Tenant List Form */
+#add-tenant-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    background-color: #c3b58b;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+#add-tenant-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+#add-tenant-form input[type="text"],
+#add-tenant-form input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #0f171b;
+    border-radius: 4px;
+}
+
+#add-tenant-form input[type="submit"] {
+    background-color: #e9f4c8;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transition: 0.3s;
+}
+
+#add-tenant-form input[type="submit"]:hover {
+    background-color: #c3b58b;
+}
+
+/* Tenant List Table */
+.tenant-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.tenant-list-table th,
+.tenant-list-table td {
+    border: 1px solid #0f171b;
+    padding: 1rem;
+}
+
+.tenant-list-table th {
+    background-color: #c3b58b;
+    color: #0f171b;
+}
+
+.tenant-list-table td {
+    text-align: center;
+}
+
+/* Rental Income Record Table */
+.rent-income-record-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.rent-income-record-table th,
+.rent-income-record-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.rent-income-record-table th {
+    background-color: #c3b58b;
+    font-weight: bold;
+    color: #0f171b;
+}
+
+.rent-income-record-table tr:nth-child(even) td {
+    background-color: #efeadb;
+}
+
+.rent-income-record-table tr:nth-child(odd) td {
+    background-color: #efeadb;
+}
+
+/* Rent Payment Form */
+#add-rent-payment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    background-color: #c3b58b;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+#add-rent-payment label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.my-select,
+#add-rent-payment input[type="text"],
+#add-rent-payment input[type="month"],
+#add-rent-payment input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #0f171b;
+    border-radius: 8px;
+}
+
+
+#add-rent-payment button {
+    background-color: #e9f4c8;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transition: 0.3s;
+}
+
+#add-rent-payment button:hover {
+    background-color: #c3b58b;
+}
+
+
+/* Expense Record Table */
+.expense-record-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.expense-record-table th,
+.expense-record-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.expense-record-table th {
+    background-color: #c3b58b;
+    font-weight: bold;
+    color: #0f171b;
+}
+
+.expense-record-table tr:nth-child(even) td {
+    background-color: #efeadb;
+}
+
+.expense-record-table tr:nth-child(odd) td {
+    background-color: #efeadb;
+}
+
+/* Expense Record Form */
+#add-expense-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    background-color: #c3b58b;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+#add-expense-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.my-select,
+#add-expense-form input[type="text"],
+#add-expense-form input[type="date"],
+#add-expense-form input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #0f171b;
+    border-radius: 8px;
+}
+
+#add-expense-form button {
+    background-color: #e9f4c8;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transition: 0.3s;
+}
+
+#add-expense-form button:hover {
+    background-color: #c3b58b;
+}
+
+/* Annual Summary Report */
+#annual-summary table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+#annual-summary th,
+#annual-summary td {
+
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+}
+
+#annual-summary th {
+    background-color: #c3b58b;
+    color: #0f171b;
+}
+
+.summary-label {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.summary-value {
+    font-weight: bold;
+    color: #100101;
+}
+
+/* Backward Button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.arrow {
+    cursor: pointer;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border: solid 6px #999;
+    border-radius: 100%;
+    z-index: 1;
+    transition: all .2s linear;
+}
+
+.arrow:before,
+.arrow:after {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 10%;
+    top: 41%;
+    left: 49%;
+    background: #999;
+    z-index: 2;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: all .2s linear;
+}
+
+.arrow:after {
+    z-index: 3;
+    top: 58%;
+    left: 49%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.arrow:hover {
+    border: solid 8px #777;
+}
+
+.arrow:hover:after,
+.arrow:hover:before {
+    background: #777;
+}
+
+.arrow:active {
+    border: solid 8px #111;
+}
+
+.arrow:active:after,
+.arrow:active:before {
+    background: #111;
+}
+
+/* Footer - Copyright */
+#footer {
+    font-family: Andalé Mono, monospace;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: .2rem;
+}
