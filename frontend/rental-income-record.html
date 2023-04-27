@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Income Record</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <a href="index.html" class="back-button arrow"></a>
+    <div id="rent-income-record">
+        <h2>Rental Income Record</h2>
+    </div>
+
+    <div id="add-rent-payment">
+        <form id="add-rent-payment-form">
+            <label for="tenant-name">Tenant Name:</label>
+            <select id="tenant-name" name="tenant-name" class="my-select" required>
+                <option value="">Select a tenant</option>
+            </select>
+
+            <label for="rent-payment-month">Month:</label>
+            <input type="month" id="rent-payment-month" name="rent-payment-month" required>
+
+            <label for="rent-payment-amount">Amount:</label>
+            <input type="number" id="rent-payment-amount" name="rent-payment-amount" step="0.01"
+                placeholder="Enter Amount" required>
+
+            <button type="submit">Add Rent Payment</button>
+        </form>
+    </div>
+    <p id="footer">Copyright © 2023 CSULB - CECS 343. All Rights Reserved</p>
+</body>
+
+</html>
