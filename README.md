@@ -15,5 +15,5 @@ With so many things to manage as a property owner or landlord, this system allow
 - Adding and removing outgoing payments to payees in the Expense Record
 - Viewing your Annual Summary
 --------------------------------------
-### Credits
+### Developers
 Alina Anwar, Aldriech Villamor, Elias Woldie, Valerie Pham, Victoria Nguyen
