@@ -8,7 +8,7 @@ They will be able to interact with tables of records:
 and will be able to view their earnings through the Annual Summary page. 
 
 With so many things to manage as a property owner or landlord, this system allows for a clearer and more concise system of governing tasks. This assists its user in keeping maintenance over financial documents and tenant records. 
--------------------------------
+
 ### Features include:
 - Adding and removing tenant names and apartment numbers from the Tenant List
 - Adding and removing incoming rent payments in the Rental Income Record
