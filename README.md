@@ -25,9 +25,3 @@ With so many things to manage as a property owner or landlord, this system allow
   - Node.js
   - Express.js
   - MySQL 
-# Developers
-- Alina Anwar
--  Aldriech Villamor
--  Elias Woldie
--  Valerie Pham
--  Victoria Nguyen
