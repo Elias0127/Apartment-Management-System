@@ -3,7 +3,7 @@ function fetchTenantsList() {
     // AJAX request to get the list of tenants
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:3000/view_tenant_list',
+        url: 'http://localhost:8000/view_tenant_list',
         success: function (response) {
             // create the table/header
             var tenantTable = $('<table>').addClass('tenant-list-table');
@@ -30,7 +30,7 @@ function fetchTenants() {
     // AJAX request to get the list of tenants
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:3000/view_tenant_list',
+        url: 'http://localhost:8000/view_tenant_list',
         success: function (response) {
             // Get the tenant-name dropdown element
             var tenantNameDropdown = $('#tenant-name');
@@ -59,12 +59,12 @@ function fetchRentIncomeRecords() {
     // AJAX request to get the list of tenants
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:3000/view_tenant_list',
+        url: 'http://localhost:8000/view_tenant_list',
         success: function (tenants) {
             // Another AJAX request to get the list of rent income records
             $.ajax({
                 type: 'GET',
-                url: 'http://localhost:3000/view_rent_income_records',
+                url: 'http://localhost:8000/view_rent_income_records',
                 success: function (response) {
                     // Create the table and header with the months
                     var rentIncomeTable = $('<table>').addClass('rent-income-record-table');
@@ -114,7 +114,7 @@ function fetchExpenses() {
     // AJAX request to get the list of expenses
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:3000/view_expense_report',
+        url: 'http://localhost:8000/view_expense_report',
         success: function (response) {
             // console.log('Expenses data:', response);
 
@@ -150,7 +150,7 @@ function fetchAnnualSummary() {
     // AJAX request to get the annual summary data
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:3000/view_annual_summary',
+        url: 'http://localhost:8000/view_annual_summary',
         success: function (response) {
             // console.log('Annual Summary data:', response);
 
@@ -206,14 +206,14 @@ $(document).ready(function () {
         // AJAX request to add a new tenant
         $.ajax({
             type: 'POST',
-            url: 'http://localhost:3000/add_tenant',
+            url: 'http://localhost:8000/add_tenant',
             contentType: 'application/json',
             data: JSON.stringify({
                 'name': name,
                 'apartment_number': apartmentNumber
             }),
             success: function (response) {
-                alert('Tenant added successfully');
+                // alert('Tenant added successfully');
                 location.reload(); // Refresh the page to display the updated data
 
             },
@@ -236,7 +236,7 @@ $(document).ready(function () {
         // AJAX request to add a new expense
         $.ajax({
             type: 'POST',
-            url: 'http://localhost:3000/add_expense',
+            url: 'http://localhost:8000/add_expense',
             contentType: 'application/json',
             data: JSON.stringify({
                 'date': date,
@@ -245,7 +245,7 @@ $(document).ready(function () {
                 'category': category
             }),
             success: function (response) {
-                alert('Expense added successfully');
+                // alert('Expense added successfully');
                 location.reload(); // Refresh the page to display the updated data
 
             },
@@ -265,7 +265,7 @@ $(document).ready(function () {
 
         try {
             const response = await $.ajax({
-                url: 'http://localhost:3000/add_rent_payment',
+                url: 'http://localhost:8000/add_rent_payment',
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({
@@ -275,7 +275,7 @@ $(document).ready(function () {
                 }),
             });
 
-            alert('Rent payment added');
+            // alert('Rent payment added');
             location.reload(); // Refresh the page to display the updated data
         } catch (error) {
             console.error(error);
@@ -289,7 +289,7 @@ $(document).ready(function () {
         // AJAX request to get the list of tenants
         $.ajax({
             type: 'GET',
-            url: 'http://localhost:3000/view_tenant_list',
+            url: 'http://localhost:8000/view_tenant_list',
             success: function (response) {
                 // console.log('Tenant list:', response);
 
@@ -321,7 +321,7 @@ $(document).ready(function () {
         // AJAX request to get the annual summary data
         $.ajax({
             type: 'GET',
-            url: 'http://localhost:3000/view_annual_summary',
+            url: 'http://localhost:8000/view_annual_summary',
             contentType: 'application/json',
             success: function (response) {
                 // console.log('Annual summary:', response);
